@@ -16,24 +16,66 @@ The Mobile Customization Framework (MCF) for Android is a comprehensive Jetpack 
 - **♿️ Accessibility First**: Full TalkBack support and accessibility compliance
 - **🎨 Styling Hooks**: Dynamic theming with server-driven styling tokens
 
-## 🚀 Installation
+## 🚀 Prerequisites
 
-### Gradle
+- Android Studio Meerkat 2024.3.1 or newer
+- Kotlin 2.1.0+
+- Minimum SDK: API level 28 (Android 9)
+- Jetpack Compose BOM configured in your project
 
-Add MobileCustomizationFramework to your project's `build.gradle`:
+## 📦 Installation
 
-```groovy
-dependencies {
-    implementation 'com.salesforce.android:mobile-customization-framework:1.0.0'
-    implementation 'com.salesforce.android:mobile-customization-components:1.0.0'
+### Step 1: Add the Maven Repository
+
+Add the MCF Maven repository to your project's `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://opensource.salesforce.com/MobileCustomizationFramework-Android/mcf-repository")
+        }
+    }
 }
 ```
 
-### Requirements
+Or if using `settings.gradle` (Groovy):
 
-- Android SDK 24 (Android 7.0) or higher
-- Kotlin 1.9+
-- Jetpack Compose 1.5+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://opensource.salesforce.com/MobileCustomizationFramework-Android/mcf-repository' }
+    }
+}
+```
+
+### Step 2: Add the Dependencies
+
+Add MCF to your module's `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("com.salesforce.android.mobilecustomizationframework:mobile-customization-framework:<version>")
+    implementation("com.salesforce.android.mobilecustomizationframework:mobile-customization-components:<version>")
+}
+```
+
+Or in `build.gradle` (Groovy):
+
+```groovy
+dependencies {
+    implementation 'com.salesforce.android.mobilecustomizationframework:mobile-customization-framework:<version>'
+    implementation 'com.salesforce.android.mobilecustomizationframework:mobile-customization-components:<version>'
+}
+```
+
+> Check the [releases](https://github.com/salesforce/MobileCustomizationFramework-Android/releases) for the latest available version.
 
 ## 🏗️ Architecture
 
