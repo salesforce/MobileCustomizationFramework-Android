@@ -63,6 +63,9 @@ Add MCF to your module's `build.gradle.kts`:
 dependencies {
     implementation("com.salesforce.android.mobilecustomizationframework:mobile-customization-framework:<version>")
     implementation("com.salesforce.android.mobilecustomizationframework:mobile-customization-components:<version>")
+
+    // Optional: HXL translation engine (MIR to UEM on-device translation)
+    implementation("com.salesforce.android.mobilecustomizationframework:mobile-customization-hxl:<version>")
 }
 ```
 
@@ -72,6 +75,9 @@ Or in `build.gradle` (Groovy):
 dependencies {
     implementation 'com.salesforce.android.mobilecustomizationframework:mobile-customization-framework:<version>'
     implementation 'com.salesforce.android.mobilecustomizationframework:mobile-customization-components:<version>'
+
+    // Optional: HXL translation engine (MIR to UEM on-device translation)
+    implementation 'com.salesforce.android.mobilecustomizationframework:mobile-customization-hxl:<version>'
 }
 ```
 
